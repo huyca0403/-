@@ -9,6 +9,7 @@
     <fragment
         android:id="@+id/mainScreen"
         android:name="com.eyesartist.magneton.ui.MainScreen"
+        tools:layout="@layout/mainview"
         android:label="MainScreen" >
         <action
             android:id="@+id/action_mainScreen_to_secondaryScreen"
@@ -16,6 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/secondaryScreen"
+        tools:layout="@layout/fragment_2"
         android:name="com.eyesartist.magneton.ui.SecondaryScreen"
         android:label="SecondaryScreen" />
 </navigation>
