@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Eyepass</string>
+    <string name="res_drawable_group_1_png">res/drawable/Group_1.png</string>
+    <string name="n">N</string>
+    <string name="s">S</string>
+    <string name="w">W</string>
+    <string name="e">E</string>
+    <string name="eyespass_v1_0_0">Eyespass v1.0.0</string>
+    <string name="info">INFORMATION</string>
+    <string name="instructions">INSTRUCTIONS</string>
+    <string name="settings">SETTINGS</string>
+    <string name="cancel">CANCEL</string>
+    <string name="perform">PERFORM</string>
+    <string name="_6_secs">6 secs</string>
+    <string name="animation_delay">ANIMATION DELAY</string>
+    <string name="todo">TODO</string>
+    <string name="_0">0°</string>
+    <string name="animation">ANIMATION</string>
+    <string name="delay">DELAY</string>
+    <string name="angle">Angle</string>
+    <string name="_18_10_03">18:10:03</string>
+    <string name="_12_92_56_n">12*92’56”N</string>
+    <string name="_29_29_23_s">29*29’23”S</string>
+    <string-array name="items_array">
+        <item>NORMAL</item>
+        <item>MODE 1</item>
+        <item>MODE 2</item>
+    </string-array>
+</resources>

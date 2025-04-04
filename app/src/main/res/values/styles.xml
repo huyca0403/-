@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar"> <!-- Hoặc theme khác bạn đang sử dụng -->
+        <item name="android:windowTranslucentStatus">true</item> <!-- Cho phép thanh thông tin trong suốt -->
+        <item name="android:statusBarColor">#00000000</item> <!-- Màu trong suốt -->
+    </style>
+</resources>

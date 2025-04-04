@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    >
+
+    <FrameLayout
+        android:id="@+id/compass_full"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Layout chính -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <include layout="@layout/taskbar" android:id="@+id/taskbar"/>
+            <include layout="@layout/coordinates" android:id="@+id/coordinator"/>
+
+            <FrameLayout
+                android:id="@+id/center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|center"
+                    android:layout_marginTop="180dp">
+
+                    <TextView
+                        android:id="@+id/textDee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_gravity="top|left"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:maxLines="1"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:singleLine="true"
+                        android:text="N 0°"
+                        android:textColor="#FFFFFFFF"
+                        android:textSize="40dp" />
+
+                    <ImageView
+                        android:id="@+id/container_polygon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="bottom|center"
+                        android:contentDescription="@string/todo"
+                        android:rotation="180"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/container_polygon" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/compass_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+                    <LinearLayout
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <!-- Thành phần 1 -->
+                            <ImageView
+                                android:id="@+id/compass_image"
+                                android:layout_width="300dp"
+                                android:layout_height="300dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/anh1" />
+
+                            <!-- Layout chứa các chữ N, S, W, E (nằm trung tâm và đè lên) -->
+                            <FrameLayout
+                                android:id="@+id/directionView"
+                                android:layout_width="300dp"
+                                android:layout_height="300dp"
+                                android:layout_gravity="center">
+
+                                <TextView
+                                    android:id="@+id/text_n"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginBottom="70dp"
+                                    android:text="@string/n"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="30sp" />
+
+                                <TextView
+                                    android:id="@+id/text_s"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="70dp"
+                                    android:text="@string/s"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="30sp" />
+
+                                <TextView
+                                    android:id="@+id/text_w"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginEnd="70dp"
+                                    android:text="@string/w"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="30sp" />
+
+                                <TextView
+                                    android:id="@+id/text_e"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="70dp"
+                                    android:text="@string/e"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="30sp" />
+
+                            </FrameLayout>
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:src="@drawable/plus_icon"
+                                />
+                        </FrameLayout>
+                    </LinearLayout>
+
+                </FrameLayout>
+
+            </FrameLayout>
+            <!-- Nội dung của layout chính -->
+        </FrameLayout>
+        <!-- Layout giữa màn hình với các thành phần chồng lên nhau -->
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/iv_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="start">
+        <include layout="@layout/fragment_menu"/>
+    </LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

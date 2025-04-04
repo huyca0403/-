@@ -1,0 +1,14 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.magneton" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:buttonStyle">@style/Widget.Material3.Button</item>
+        <!-- Không thay đổi dựa trên kích thước font của hệ thống -->
+        <item name="android:fontFamily">@font/fredoka_light</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:forceDarkAllowed">false</item>
+    </style>
+    <style name="Theme.magneton" parent="Base.Theme.magneton" />
+</resources>
