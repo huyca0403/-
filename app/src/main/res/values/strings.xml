@@ -21,6 +21,7 @@
     <string name="_18_10_03">18:10:03</string>
     <string name="_12_92_56_n">12*92’56”N</string>
     <string name="_29_29_23_s">29*29’23”S</string>
+    <string name="august_15_2024">August 15, 2024</string>
     <string-array name="items_array">
         <item>NORMAL</item>
         <item>MODE 1</item>

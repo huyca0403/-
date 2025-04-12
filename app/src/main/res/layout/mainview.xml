@@ -6,9 +6,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/black"
-    >
+    android:background="@color/black">
+    <LinearLayout
+        android:id="@+id/taskbar_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="22dp"
+        android:paddingStart="30dp"
+        android:paddingEnd="85dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/taskbar_left_icon"
+            android:layout_marginTop="10dp"
+            android:layout_width="33dp"
+            android:layout_height="23dp"
+            android:layout_marginEnd="31dp"
+            android:src="@drawable/anh2"
+            android:scaleType="fitXY"/>
 
+        <TextView
+            android:id="@+id/taskbar_text"
+            android:textColor="#A5A5A5"
+            android:textSize="29dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="1dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/august_15_2024"/>
+    </LinearLayout>
     <FrameLayout
         android:id="@+id/compass_full"
         android:layout_width="match_parent"
@@ -18,7 +43,6 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <include layout="@layout/taskbar" android:id="@+id/taskbar"/>
             <include layout="@layout/coordinates" android:id="@+id/coordinator"/>
 
             <FrameLayout
@@ -37,12 +61,12 @@
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:layout_gravity="top|left"
+                        android:layout_marginBottom="20dp"
                         android:gravity="center_vertical"
                         android:includeFontPadding="false"
                         android:maxLines="1"
                         android:paddingLeft="20dp"
                         android:paddingRight="20dp"
-                        android:layout_marginBottom="20dp"
                         android:singleLine="true"
                         android:text="N 0°"
                         android:textColor="#FFFFFFFF"
@@ -64,8 +88,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center">
-                    <LinearLayout
-                        xmlns:android="http://schemas.android.com/apk/res/android"
+
+                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
@@ -131,12 +155,12 @@
                                     android:textSize="30sp" />
 
                             </FrameLayout>
+
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:src="@drawable/plus_icon"
-                                />
+                                android:src="@drawable/plus_icon" />
                         </FrameLayout>
                     </LinearLayout>
 
@@ -147,13 +171,4 @@
         </FrameLayout>
         <!-- Layout giữa màn hình với các thành phần chồng lên nhau -->
     </FrameLayout>
-
-    <LinearLayout
-        android:id="@+id/iv_menu"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_gravity="start">
-        <include layout="@layout/fragment_menu"/>
-    </LinearLayout>
 </androidx.drawerlayout.widget.DrawerLayout>
